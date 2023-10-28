@@ -6,72 +6,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta user-scalable="no">
-
-    <style>
-        body
-        {
-            background-color: red;
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
+    <link rel="stylesheet" href="src/login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script>
+        function showLogin() {
+            setTimeout(function(){
+                document.getElementById("login").style.display = "flex";
+            }, 0)
         }
-
-        .boxes 
-        {
-            border: 1em outset rgb(0, 0, 255);
-            text-align: end;
-        }
-
-    </style>
-    
-
+    </script>
 </head>
-<body>
-    
-    <h1 style="color: yellow;">BIG SALE!!!</h1>
-    <div style="position: fixed; width: 500px; height: 200px; top: 90%; left: 50%; margin-left: -250px;">
-        <img src="Images/Logo.png" width="600" height="100">
+<body onload="showLogin()">
+    <div class="login-popup" id="login">
+        <div class="popup-container">
+            <div class="input-row">
+                <input class="input" id="username" type="password" placeholder="Username" readonly>
+                <span class="material-symbols-outlined" id="x-user" onclick="clearInput(this)">close</span>
+            </div>
+            <br>
+            <div class="input-row">
+                <input class="input" id="password" placeholder="Password" readonly>
+                <span class="material-symbols-outlined" id="x-pass" onclick="clearInput(this)">close</span>
+            </div>
+            <br>
+            <input class="submit" type="submit" value="Submit" onclick="updateLoggedIn();loginClose()">
+        </div>
+        <div class="simple-keyboard"></div>
     </div>
-    <div class="boxes" style="position:absolute; left:30em; top:0em; background-color:yellow; height: 17em; width: 10em;">
-        <h1 style="text-align: center; line-height: 1em;">Fumo mega plushie extreme edition</h1>
-        <img src="Images/fumo.jpg" width="200" height="100">
-        <a href="https://www.ebay.co.uk/itm/114954648676?hash=item1ac3d4bc64:g:SNkAAOSw4k1hJxfZ&amdata=enc%3AAQAIAAAAwFpVE5oFWHln5mvnnCgLTIgQi6QcLbe1A2B%2By%2FNiu%2F4RcDTEFLeEotGDmwoCzgGnTrIt0QE4%2B7qoqwAXjf5J4O3q7FGt6yG%2FqlXB8kQEOwHPnHAvBXz7mShDYw8kTTPI1qbltjfZbbCpmlaqFgxXhjTkDBmMoJYoRM1xnRYmffdVDcHERKuTFsMRrNFlZThN6NbVXXVIIKGtjRILvsFW42M67twLfVIqyrgdl7gn8xFFe2HsAmG1GA74lfP1wfhKLw%3D%3D%7Ctkp%3ABk9SR9T51f7uYg"><button style="width: 13em;">Buy</button></a>
-        <p style="text-align: center; color: rgb(0, 0, 0); line-height: 1em;"><b><s>Two dollars</s></b></p>
-        <p style="text-align: center;"><b>Two thousand three hundred and twenty nine dollars</b></p>
+
+
+    <div class="page-content">
+        <h1 style="color: yellow;">BIG SALE!!!</h1>
+        <div style="position: fixed; width: 500px; height: 200px; top: 90%; left: 50%; margin-left: -250px;">
+            <img src="Images/Logo.png" width="600" height="100">
+        </div>
+        <div class="boxes" style="position:absolute; left:30em; top:0em; background-color:yellow; height: 17em; width: 10em;">
+            <h1 style="text-align: center; line-height: 1em;">Fumo mega plushie extreme edition</h1>
+            <img src="Images/fumo.jpg" width="200" height="100">
+            <a href="https://www.ebay.co.uk/itm/114954648676?hash=item1ac3d4bc64:g:SNkAAOSw4k1hJxfZ&amdata=enc%3AAQAIAAAAwFpVE5oFWHln5mvnnCgLTIgQi6QcLbe1A2B%2By%2FNiu%2F4RcDTEFLeEotGDmwoCzgGnTrIt0QE4%2B7qoqwAXjf5J4O3q7FGt6yG%2FqlXB8kQEOwHPnHAvBXz7mShDYw8kTTPI1qbltjfZbbCpmlaqFgxXhjTkDBmMoJYoRM1xnRYmffdVDcHERKuTFsMRrNFlZThN6NbVXXVIIKGtjRILvsFW42M67twLfVIqyrgdl7gn8xFFe2HsAmG1GA74lfP1wfhKLw%3D%3D%7Ctkp%3ABk9SR9T51f7uYg"><button style="width: 13em;">Buy</button></a>
+            <p style="text-align: center; color: rgb(0, 0, 0); line-height: 1em;"><b><s>Two dollars</s></b></p>
+            <p style="text-align: center;"><b>Two thousand three hundred and twenty nine dollars</b></p>
+        </div>
+        <div class="boxes" style="position:absolute; left:7em; top:10em; background-color:rgb(200, 0, 255); height: 10em; width: 16em;">
+            <h1 style="text-align: center; line-height: 1em;">Lethal weapon</h1>
+            <img src="Images/nerf.jpg" width="200" height="100">
+            <a href="illegal.html"><button style="width: 13em;">Buy</button></a>
+            <p style="text-align: center; color: rgb(0, 0, 0); line-height: 1em;"><b><s>Five</s></b></p>
+            <p style="text-align: center;"><b>Two</b></p>
+        </div>
+        <div class="boxes" style="position:absolute; left:14em; top:30em; background-color:rgb(128, 94, 0); height: 10em; width: 16em;">
+            <h1 style="text-align: center; line-height: 1em;">Tome of the ages</h1>
+            <img src="Images/book.webp" width="300" height="200">
+            <a href="monkey.html"><button style="width: 13em;">Buy</button></a>
+            <p style="text-align: center; color: rgb(0, 0, 0); line-height: 1em;"><b><s>£25</s></b></p>
+            <p style="text-align: center;"><b>0.5p</b></p>
+            <p style="text-align: center;"><b>(Exact payments only)</b></p>
+        </div>
+        <div class="boxes" style="position:absolute; left:10em; top:60em; background-color:rgb(5, 139, 0); height: 3em; width: 3em;">
+            <h1 style="text-align: center; line-height: 1em;">A single needle</h1>
+            <img src="Images/cactus.webp" width="100" height="33">
+            <button onclick="alert('ow')" style="width: 13em;">Buy</button>
+            <p style="text-align: center; color: rgb(0, 0, 0); line-height: 1em;"><b><s>Gary</s></b></p>
+            <p style="text-align: center;"><b>Bob</b></p>
+        </div>
+        <div class="boxes" style="position:absolute; left:50em; top:10em; background-color:rgb(0, 255, 242); height: 30em; width: 45em;">
+            <h1 style="text-align: center; line-height: 1em;">Programming Attire</h1>
+            <img src="Images/programmingAttire.jpg" width="300" height="200">
+            <button style="width: 13em;">Buy</button>
+            <p style="text-align: center; color: rgb(0, 0, 0); line-height: 1em;"><b><s>£29</s></b></p>
+            <p style="text-align: center;"><b>3 cammels, 5 lethal weapons, 300g of cotton, 1 kg of uranium 235</b></p>
+        </div>
+        <div class="boxes" style="position:absolute; left:40em; top:45em; background-color:rgb(0, 0, 0); height: 10em; width: 50em;">
+            <h1 style="text-align: center; line-height: 1em; color: white;">Ratatouille</h1>
+            <img id="Rat" src="Images/Rat.jpg" width="300" height="200">
+            <a href="https://www.kfc.co.uk"><button style="width: 13em;">He overstepped his boundaries.</button></a>
+            <p style="text-align: center; color: rgb(0, 0, 0); line-height: 1em;"><b><s>£3.99</s></b></p>
+            <p style="text-align: center;"><b></b>£3.00</p>
+            <p style="text-align: center;"><b></b>£4.00 (Yes but make it a meal)</p>
     </div>
-    <div class="boxes" style="position:absolute; left:7em; top:10em; background-color:rgb(200, 0, 255); height: 10em; width: 16em;">
-        <h1 style="text-align: center; line-height: 1em;">Lethal weapon</h1>
-        <img src="Images/nerf.jpg" width="200" height="100">
-        <a href="illegal.html"><button style="width: 13em;">Buy</button></a>
-        <p style="text-align: center; color: rgb(0, 0, 0); line-height: 1em;"><b><s>Five</s></b></p>
-        <p style="text-align: center;"><b>Two</b></p>
     </div>
-    <div class="boxes" style="position:absolute; left:14em; top:30em; background-color:rgb(128, 94, 0); height: 10em; width: 16em;">
-        <h1 style="text-align: center; line-height: 1em;">Tome of the ages</h1>
-        <img src="Images/book.webp" width="300" height="200">
-        <a href="monkey.html"><button style="width: 13em;">Buy</button></a>
-        <p style="text-align: center; color: rgb(0, 0, 0); line-height: 1em;"><b><s>£25</s></b></p>
-        <p style="text-align: center;"><b>0.5p</b></p>
-        <p style="text-align: center;"><b>(Exact payments only)</b></p>
-    </div>
-    <div class="boxes" style="position:absolute; left:10em; top:60em; background-color:rgb(5, 139, 0); height: 3em; width: 3em;">
-        <h1 style="text-align: center; line-height: 1em;">A single needle</h1>
-        <img src="Images/cactus.webp" width="100" height="33">
-        <button onclick="alert('ow')" style="width: 13em;">Buy</button>
-        <p style="text-align: center; color: rgb(0, 0, 0); line-height: 1em;"><b><s>Gary</s></b></p>
-        <p style="text-align: center;"><b>Bob</b></p>
-    </div>
-    <div class="boxes" style="position:absolute; left:50em; top:10em; background-color:rgb(0, 255, 242); height: 30em; width: 45em;">
-        <h1 style="text-align: center; line-height: 1em;">Programming Attire</h1>
-        <img src="Images/programmingAttire.jpg" width="300" height="200">
-        <button style="width: 13em;">Buy</button>
-        <p style="text-align: center; color: rgb(0, 0, 0); line-height: 1em;"><b><s>£29</s></b></p>
-        <p style="text-align: center;"><b>3 cammels, 5 lethal weapons, 300g of cotton, 1 kg of uranium 235</b></p>
-    </div>
-    <div class="boxes" style="position:absolute; left:40em; top:45em; background-color:rgb(0, 0, 0); height: 10em; width: 50em;">
-        <h1 style="text-align: center; line-height: 1em; color: white;">Ratatouille</h1>
-        <img id="Rat" src="Images/Rat.jpg" width="300" height="200">
-        <a href="https://www.kfc.co.uk"><button style="width: 13em;">He overstepped his boundaries.</button></a>
-        <p style="text-align: center; color: rgb(0, 0, 0); line-height: 1em;"><b><s>£3.99</s></b></p>
-        <p style="text-align: center;"><b></b>£3.00</p>
-        <p style="text-align: center;"><b></b>£4.00 (Yes but make it a meal)</p>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
+    <script src="src/login.js"></script>
+    <script src="src/timeout.js"></script>
 </body>
 </html>
