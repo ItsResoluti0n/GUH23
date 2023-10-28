@@ -11,12 +11,39 @@
         {
             background-color: green;
         }
+        .center 
+        {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        .flex-container
+        {
+            display: flex;
+            flex-direction: row;
+        }
+        .flex-container > div 
+        {
+            background-color: white;
+            width: 100vw;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
     </style>
 
 </head>
 <body>
-    <div style="position: relative; width: 500px; height: 200px; top: 50%; left: 50%; margin-left: -250px;">
-        <img src="Images/programmingAttire.jpg">
+    <div class="flex-container">    
+        <div style="height: 15em; width: 20em;">Programming Suit</div>
+        <div style="height: 20em;"><img src="Images/programmingAttire.jpg" class="center"></div>
+        <div style="height: 15em; width: 20em;">3 cammels, 5 lethal weapons, 300g of cotton, 1 kg of uranium 235</div>
+    </div>
+    <a href="404.html" style="text-decoration: none;"><button class="center" style="height: 200px; background-color: darkgoldenrod; font-size: 5em;">BUY NOW!!!</button></a>
+    <div style="position: fixed; width: 500px; height: 200px; top: 90%; left: 64%;">
+        <a href="index.html"><img src="Images/Logo.png" width="600" height="100"></a>
     </div>
 </body>
 </html>

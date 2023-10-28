@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <style>
+        #demo
+        {
+            text-align: center;
+            font-size: 60px;
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1><b>404 Error</b></h1>
+    <p>The file may have been moved, edited or deleted.</p>
+    <p>ERR_FILE_NOT_FOUND</p>
+
+    <p id="demo"> bruhwuhfuahduf </p>
+
+    <script>
+        // Set the date we're counting down to
+        var Time = 5;
+        document.getElementById("demo").innerHTML = Time.toString();
+
+        var x = setInterval(function() {
+            Math.floor(Timer -= 1);
+            document.getElementById("demo").innerHTML = Time.toString();
+
+            if (Timer == 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000)
+    </script>
+</body>
+</html>
