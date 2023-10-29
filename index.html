@@ -18,16 +18,30 @@
     </script>
 </head>
 <body onload="showLogin()">
+    
+    <span class="material-symbols-outlined menu-button" onclick="openNav()">
+        menu
+    </span>
+
+    <div id="mySidenav" class="sidenav">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">About</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a onclick="toAbout()">About</a>
+            </div>
+          </div> 
+      </div>
+
     <div class="login-popup" id="login">
         <div class="popup-container">
             <div class="input-row">
                 <input class="input" id="username" type="password" placeholder="Username" readonly>
-                <span class="material-symbols-outlined" id="x-user" onclick="clearInput(this)">close</span>
+                <span class="material-symbols-outlined x-symbol" id="x-user" onclick="clearInput(this)">close</span>
             </div>
             <br>
             <div class="input-row">
                 <input class="input" id="password" placeholder="Password" readonly>
-                <span class="material-symbols-outlined" id="x-pass" onclick="clearInput(this)">close</span>
+                <span class="material-symbols-outlined x-symbol" id="x-pass" onclick="clearInput(this)">close</span>
             </div>
             <br>
             <input class="submit" type="submit" value="Submit" onclick="updateLoggedIn();loginClose()">
@@ -90,5 +104,6 @@
     <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
     <script src="src/login.js"></script>
     <script src="src/timeout.js"></script>
+    <script src="src/navigation.js"></script>
 </body>
 </html>
