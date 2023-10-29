@@ -25,6 +25,6 @@ function myFunction() {
 function toAbout() {
     let x = confirm("You will be sent to about pag, are you sure?");
     if(x) {
-        window.location.href = "about.html";
+        window.location.href = "aboutus.html";
     }
 }
