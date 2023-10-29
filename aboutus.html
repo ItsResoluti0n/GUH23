@@ -21,6 +21,7 @@
         }
         .box{
             border:solid;
+
             border-radius:8px;
             border-width:2px;
             border-color:black;
@@ -60,6 +61,28 @@
             background-color:black;
             border:10px solid#fff;
 
+=======
+            border-radius:10px;
+            border-width:10px;
+            border-color:teal;
+            color:brown;
+        }
+        .hiddenbox{
+            border:solid;
+            border-radius:10px;
+            border-width:10px;
+            border-color:teal;
+            color:brown;
+            display:none;
+            height:50px;
+            background-color:green;
+        }
+        .bios:focus + .hiddenbox{
+        display:block;
+        }
+        button{
+            cursor:pointer;
+
         }
         .maindiv{
             width:50%;
@@ -80,10 +103,6 @@
             75%{background-image:url("Images/perfect.png"); }
             /* Add Any Horrible Images Here :) */
         }
-        #popup{
-            border:solid red;
-
-        }
         
     </style>
 </head>
@@ -96,7 +115,11 @@
    <a href="index.html"> <img src="Images/Logo.png" id="logo" width="500" ></a>
     
         <div class="box" style="font-family: 'Courier New', Courier, monospace;position: fixed; width: 500px; height: 250px; top: 20%; left: 0%; border-color:white;text-align:center;background-color:yellow;">
+
         <p style="text-decoration:underline;">About Us and Our Goals</p>
+
+        <p>About Us and Our Goals</p>
+
         <p> We had a dream today to develop the greatest online shopping site of all time. In just 24 hours, we easily succeeded.</p>
         
         <p>We created this website to inspire the next generation of coders to show that you can create an amazing website no matter the circumstances.</p>
@@ -132,6 +155,7 @@
     </details>
     </div>
     <div style="top:90%;">
+
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button style="border:solid;border-radius:10px; color:magenta; background-color:black; cursor:pointer;">Click here to find more out about how and why we made this website.</button></a>
     </div>
     <div  id="mainpopup" class="popup" >
@@ -153,3 +177,10 @@
     </script>
 </body>
 </html>
+
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button style="border:solid;border-radius:10px; color:magenta; background-color:black;">Just a little bit of info into why we decided to go for this option.</button></a>
+    </div>
+
+</body>
+</html>
+
