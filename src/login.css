@@ -4,7 +4,6 @@ body {
 
 .boxes {
         border: 1em outset rgb(0, 0, 255);
-        text-align: end;
 }
 
 .login-popup {
