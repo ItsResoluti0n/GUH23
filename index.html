@@ -18,16 +18,26 @@
     </script>
 </head>
 <body onload="showLogin()">
+
+    <span class="material-symbols-outlined menuOpen">
+        menu
+    </span>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+      </div>
+
     <div class="login-popup" id="login">
         <div class="popup-container">
             <div class="input-row">
                 <input class="input" id="username" type="password" placeholder="Username" readonly>
-                <span class="material-symbols-outlined" id="x-user" onclick="clearInput(this)">close</span>
+                <span class="material-symbols-outlined inputX" id="x-user" onclick="clearInput(this)">close</span>
             </div>
             <br>
             <div class="input-row">
                 <input class="input" id="password" placeholder="Password" readonly>
-                <span class="material-symbols-outlined" id="x-pass" onclick="clearInput(this)">close</span>
+                <span class="material-symbols-outlined inputX" id="x-pass" onclick="clearInput(this)">close</span>
             </div>
             <br>
             <input class="submit" type="submit" value="Submit" onclick="updateLoggedIn();loginClose()">
